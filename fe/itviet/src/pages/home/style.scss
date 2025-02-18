@@ -1,33 +1,44 @@
-html, body {
+html,
+body {
+    // margin: 0;
+    // padding: 0;
+    // font-family: Arial, sans-serif;
+    // height: 100vh;
+    // /* Toàn màn hình */
+    // display: flex;
+    // flex-direction: column;
+    width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh; /* Toàn màn hình */
-    display: flex;
-    flex-direction: column;
 }
 
 * {
     font-family: Roboto;
     padding: 0;
     margin: 0;
-    
+
 }
 
 .background-section {
-    position: absolute; /* Sử dụng absolute để phần nền không chiếm không gian */
+    position: absolute;
+    /* Sử dụng absolute để phần nền không chiếm không gian */
     top: 0;
     left: 0;
     width: 100%;
-    height: 270px; /* Chiều cao cố định của phần nền */
+    height: 270px;
+    /* Chiều cao cố định của phần nền */
     background: linear-gradient(300deg, #790000 10%, #330000 20%, #000000 120%);
-    z-index: 1; /* Đảm bảo phần nền nằm dưới phần nội dung */
+    z-index: 1;
+    /* Đảm bảo phần nền nằm dưới phần nội dung */
 }
 
 .main-container {
-    position: relative; /* Thiết lập relative để phần main có thể đè lên */
-    z-index: 2; /* Đảm bảo phần nội dung nằm trên phần nền */
-    flex-grow: 1; /* Phần nội dung sẽ chiếm phần còn lại của màn hình */
+    position: relative;
+    /* Thiết lập relative để phần main có thể đè lên */
+    z-index: 2;
+    /* Đảm bảo phần nội dung nằm trên phần nền */
+    flex-grow: 1;
+    /* Phần nội dung sẽ chiếm phần còn lại của màn hình */
 }
 
 .main {
@@ -36,9 +47,12 @@ html, body {
     padding-left: 85px;
     padding-right: 85px;
     color: rgb(139, 34, 34);
-    background: transparent; /* Nền trong suốt để phần nền hiển thị bên dưới */
-    position: relative; /* Đảm bảo phần main có thể đè lên phần nền */
-    z-index: 2; /* Đảm bảo phần main nằm trên phần nền */
+    background: transparent;
+    /* Nền trong suốt để phần nền hiển thị bên dưới */
+    position: relative;
+    /* Đảm bảo phần main có thể đè lên phần nền */
+    z-index: 2;
+    /* Đảm bảo phần main nằm trên phần nền */
 }
 
 /* Phần Header và các style khác giữ nguyên */
@@ -59,6 +73,21 @@ html, body {
     display: inline-block;
 }
 
+.dropdown-level {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-work {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-industry {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -74,6 +103,7 @@ html, body {
     display: none;
     min-width: 250px;
     text-align: left;
+
 }
 
 .dropdown:hover .dropdown-menu {
@@ -99,6 +129,7 @@ html, body {
     font-size: 16px;
     text-align: center;
 }
+
 .dropdown-button-main {
     background: white;
     color: rgb(138, 129, 129);
@@ -113,8 +144,10 @@ html, body {
 .dropdown-button-main p {
     display: flex;
     align-items: center;
-    width: 100%; /* Đảm bảo p chiếm toàn bộ chiều rộng của button */
-    margin: 0; /* Loại bỏ margin mặc định của thẻ p */
+    width: 100%;
+    /* Đảm bảo p chiếm toàn bộ chiều rộng của button */
+    margin: 0;
+    /* Loại bỏ margin mặc định của thẻ p */
 }
 
 
@@ -144,8 +177,10 @@ html, body {
 }
 
 .icon-right {
-    margin-left: auto; /* Đẩy icon về phía bên phải */
-    padding-right: 0; /* Đảm bảo icon nằm sát lề bên phải */
+    margin-left: auto;
+    /* Đẩy icon về phía bên phải */
+    padding-right: 0;
+    /* Đảm bảo icon nằm sát lề bên phải */
 }
 
 
@@ -162,7 +197,7 @@ html, body {
 }
 
 .search-button {
-    background-color:red;
+    background-color: red;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -173,11 +208,11 @@ html, body {
     width: 200px;
 }
 
-.search-container{
+.search-container {
     padding-bottom: 20px;
 }
 
-.style{
+.style {
     font-weight: bold;
     size: 100px;
 }
@@ -188,20 +223,24 @@ html, body {
 }
 
 .job-list {
-    flex: 1;
+    flex: 1; /* Cho phép .job-list mở rộng chiều rộng */
     margin-right: 20px;
 }
 
 .job-list ul {
     list-style-type: none;
-    padding: 0;
+    margin-bottom: -10px;
+    
 }
 
 .job-list li {
+    position: relative;
     padding: 10px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
     cursor: pointer;
+    width: 500px;
+    height: 250px;
 }
 
 .job-list li:hover {
@@ -209,68 +248,85 @@ html, body {
 }
 
 .job-detail {
-    flex: 2;
+    flex: 2; /* Phần chi tiết sẽ chiếm nhiều không gian hơn */
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
 }
-.header-images{
+
+.job-state {
+    position: absolute; /* Căn chỉnh job-state ở vị trí tuyệt đối */
+    top: 10px;  /* Khoảng cách từ trên */
+    right: 10px;  /* Khoảng cách từ bên phải */
+    background-color: #cd6b0f;  /* Màu nền */
+    color: white;  /* Màu chữ */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;  /* Làm cho chữ đậm */
+}
+
+.header-images {
     display: flex;
     background-color: #f0f0f0;
 }
 
-.boder-main{
+.boder-main {
     border-right: 1px dashed rgb(203, 190, 190);
     padding-left: 70px;
     height: 185px;
 }
 
-.img-size1{
+.img-size1 {
     width: 300px;
     height: 200px;
 }
-.img-size2{
+
+.img-size2 {
     width: 123px;
     height: 120px;
-    transform: translateX(-24%); /* Dịch chuyển về chính giữa */
+    transform: translateX(-24%);
+    /* Dịch chuyển về chính giữa */
     padding-top: 40px;
 }
 
-.header-main{
+.header-main {
     color: #000000;
     padding-top: 25px;
-   text-align: justify;
+    text-align: justify;
 }
 
 
-.header-conten{
-    flex-direction: column; /* Sắp xếp theo chiều dọc */
+.header-conten {
+    flex-direction: column;
+    /* Sắp xếp theo chiều dọc */
 }
 
-.header-main-conten{
+.header-main-conten {
     color: #3f3c3c;
     display: flex;
 }
 
-.conten-main{
-    width: 400px; /* Giới hạn chiều rộng */
-    word-wrap: break-word; /* Cho phép từ bị cắt xuống dòng nếu quá dài */
+.conten-main {
+    width: 400px;
+    /* Giới hạn chiều rộng */
+    word-wrap: break-word;
+    /* Cho phép từ bị cắt xuống dòng nếu quá dài */
     text-align: justify;
     color: #3f3c3c;
     padding-top: 20px;
 }
 
-.conten-link{
+.conten-link {
     color: blue;
     text-align: justify;
     padding-top: 25px;
     font-size: 15px;
-    
+
 }
 
 .job-list1 {
     padding: 40px 30px;
-    
+
 }
 
 .mota {
@@ -283,23 +339,23 @@ html, body {
 
 }
 
-.h1{
+.h1 {
     padding-top: 20px;
-    color: #000000;
+    color: #0e0c0c;
     padding-bottom: 20px;
     text-align: justify;
 }
 
-.filter{
+.filter {
     background-color: #f0f0f0;
     height: 46px;
     padding-top: 10px;
     padding-left: 20px;
-    gap:13px;
+    gap: 13px;
     display: flex;
 }
 
-.dropdown-button-filter{
+.dropdown-button-filter {
     font-size: 18px;
     color: #4a4545;
     border: 1px solid #cbc3c3;
@@ -307,3 +363,141 @@ html, body {
     padding: 5px;
 }
 
+.dropdown-menu-checkbox {
+    display: block;
+    /* Hiển thị dropdown menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgb(252, 251, 251);
+    color: rgb(14, 13, 13);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    width: 150px;
+    min-width: 250px;
+    text-align: left;
+    z-index: 1000;
+
+    /* Hiển thị tối đa 5 phần tử, và có cuộn khi vượt quá */
+    max-height: 250px;
+    /* Chiều cao tối đa */
+    overflow-y: auto;
+    /* Thêm cuộn dọc khi vượt quá */
+}
+
+.dropdown-menu-checkbox-industry {
+    position: absolute;
+    left: 0;
+    background: rgb(252, 251, 251);
+    color: rgb(21, 19, 19);
+    border: none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    width: 250px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    text-align: left
+    
+}
+
+.dropdown-menu-checkbox-industry li {
+    padding: 10px;
+    cursor: pointer;
+    //transition: background-color 0.2s;
+    font-size: 16px; /* Điều chỉnh kích thước chữ */
+}
+
+.dropdown-menu-checkbox-industry input[type="checkbox"] {
+    display: inline-block;
+    /* Đảm bảo checkbox hiển thị */
+    margin-right: 8px;
+    /* Tạo khoảng cách giữa checkbox và label */
+    accent-color: red;
+    /* Đổi màu checkbox thành đỏ */
+    width: 18px;
+    height: 18px;
+}
+
+
+.dropdown-menu-checkbox li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu-checkbox li:hover {
+    background: rgba(207, 10, 10, 0.2);
+}
+
+.dropdown-menu-checkbox input[type="checkbox"] {
+    display: inline-block;
+    /* Đảm bảo checkbox hiển thị */
+    margin-right: 8px;
+    /* Tạo khoảng cách giữa checkbox và label */
+    accent-color: red;
+    /* Đổi màu checkbox thành đỏ */
+    width: 18px;
+    height: 18px;
+}
+
+.alike{
+    text-align: start;
+}
+
+.time{
+    font-size: 14px;
+    color: #887f7f;
+    padding-bottom: 20px;
+}
+
+.title{
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+.img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.name{
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    color: #3f3c3c;
+    padding-bottom: 20px;
+}
+.name img {
+    margin-right: 10px; /* Khoảng cách giữa ảnh và tên */
+}
+.view-salary {
+    text-decoration: underline; /* Gạch chân văn bản */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột qua */
+    color: #484040; /* Màu giống liên kết */
+    font-size: 20px;
+}
+
+.view-salary:hover {
+    color: #484040; /* Thay đổi màu khi hover, tùy chỉnh theo ý muốn */
+}
+.word-model {
+    color: #393636;
+    padding-right: 10px; /* Thêm padding-right cho khoảng cách bên phải */
+    display: flex; /* Sử dụng flex để canh chỉnh icon và văn bản nếu cần */
+    align-items: center; /* Đảm bảo rằng icon và text được căn chỉnh đúng */
+}
+
+.boder-w{
+    border-bottom: 1px dashed rgb(203, 190, 190);
+    padding-bottom: 10px;
+}
+
+.location{
+    color: #393636;
+}
