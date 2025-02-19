@@ -39,6 +39,8 @@ body {
     /* Đảm bảo phần nội dung nằm trên phần nền */
     flex-grow: 1;
     /* Phần nội dung sẽ chiếm phần còn lại của màn hình */
+    padding-top: 60px;
+    border: 1px solid white;
 }
 
 .main {
@@ -65,7 +67,10 @@ body {
     gap: 20px;
     white-space: nowrap;
     z-index: 1000;
-    position: relative;
+    position: fixed;  /* Giữ cố định */
+    top: 0;           /* Cố định ở trên cùng */
+    left: 0;
+    width: 100%;      /* Trải dài toàn bộ trang */
 }
 
 .dropdown {
@@ -240,7 +245,7 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     width: 500px;
-    height: 250px;
+    height: 290px;
 }
 
 .job-list li:hover {
@@ -491,13 +496,111 @@ body {
     padding-right: 10px; /* Thêm padding-right cho khoảng cách bên phải */
     display: flex; /* Sử dụng flex để canh chỉnh icon và văn bản nếu cần */
     align-items: center; /* Đảm bảo rằng icon và text được căn chỉnh đúng */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .boder-w{
     border-bottom: 1px dashed rgb(203, 190, 190);
     padding-bottom: 10px;
-}
+}   
 
 .location{
     color: #393636;
+    padding-bottom: 10px;
+}
+
+.img1{
+    padding-right: 5px;
+    width: 100px;
+    height: 90px;
+    text-align: center;
+}
+
+.h2-detail{
+    text-align: left;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.img-detail{
+    display: flex;
+    color: #000000;
+    text-align: left;
+}
+
+.name-detail{
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.view-detail{
+    font-size: 20px;
+}
+
+.button-detail{
+    background-color: red;
+    color: white;
+    width: 110%;
+    height: 40px;
+    display: block; /* Đảm bảo button chiếm toàn bộ dòng */
+    margin-left: 0; /* Đẩy button về bên trái */
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.detail-button-icon{
+    display: flex;
+    align-items: center;
+}
+
+.border-detail{
+    border-bottom: 1px solid #afa1a1;
+    padding-top: 20px;
+}
+
+.border-detail1{
+    border-bottom: 1px dashed #afa1a1;
+    padding-top: 3px;
+}
+
+.location-work-detail{
+    padding-top: 30px;
+    color: #000000;
+    text-align: left; 
+}
+
+.location-work-detail p{
+    padding-bottom: 15px;
+}
+
+.skill-button{
+    background-color: white;
+    color: #000000;
+}
+
+.skill-detail{
+    display: flex;
+    align-items: center;
+}
+
+.pd{
+    padding-right: 20px;
+}
+.conten-detail{
+    text-align: left;
+    color: #000000;
+}
+.conten-detail h2{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.conten-detail p{
+    padding-bottom: 7px;
+    font-size: 18px;
+}
+
+.detail{
+    max-height: 750px;  /* Giới hạn chiều cao */
+    overflow-y: auto;   /* Thanh cuộn nếu nội dung quá dài */
 }
