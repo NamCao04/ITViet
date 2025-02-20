@@ -670,7 +670,16 @@ const Home = () => {
                             <div className="conten-detail">
                                 <h2 >Job description</h2>
                                 {selectedJob?.conten1.map((item, index) => (
-                                    <p key={index}>{item}</p>
+                                    item.includes("\n") ? (
+                                        <p key={index}>
+                                            <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
+                                            {item.split("\n").slice(2).map((part, i) => (
+                                                <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
+                                            ))}
+                                        </p>
+                                    )  : (
+                                        <p key={index}>{item}</p>
+                                    )
                                 ))}
                                 <p className="border-detail1"></p>
                             </div>
@@ -678,9 +687,14 @@ const Home = () => {
                             <div className="conten-detail">
                                 <h2 >Your skills and experience</h2>
                                 {selectedJob?.conten2.map((item, index) => (
-                                    item.includes("Ưu tiên các ứng viên") ? (
-                                        <p key={index}><strong>{item}</strong></p>
-                                    ) : (
+                                    item.includes("\n") ? (
+                                        <p key={index}>
+                                            <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
+                                            {item.split("\n").slice(2).map((part, i) => (
+                                                <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
+                                            ))}
+                                        </p>
+                                    )  : (
                                         <p key={index}>{item}</p>
                                     )
                                 ))}
@@ -690,14 +704,70 @@ const Home = () => {
                             <div className="conten-detail">
                                 <h2 >Why you'll love working here</h2>
                                 {selectedJob?.conten3.map((item, index) => (
-                                    item.includes("Chế độ phúc lợi:") || item.includes("Đào tạo và phát triển nguồn nhân lực") || item.includes("Cơ hội thăng tiến") ? (
-                                        <p key={index}><strong>{item}</strong></p>
-                                    ) : (
+                                    item.includes("\n") ? (
+                                        <p key={index}>
+                                            <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
+                                            {item.split("\n").slice(2).map((part, i) => (
+                                                <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
+                                            ))}
+                                        </p>
+                                    )  : (
                                         <p key={index}>{item}</p>
                                     )
                                 ))}
                                 <p className="border-detail"></p>
                             </div>
+
+                            <div className="detail-ft">
+                                <h2>{selectedJob?.name}</h2>
+                                <p>{selectedJob?.name}</p>
+                                <div className="footer-detail">
+                                    <div className="d-t-1">
+                                        Company type
+                                        <p>bbbb</p>
+                                    </div>
+
+                                    <div className="d-t-2">
+                                    Company industry
+                                        <p>
+                                            ddd
+                                        </p>
+                                    </div>
+
+                                    <div className="d-t-3">
+                                    Company size
+                                        <p>
+                                            fff
+                                        </p>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div className="footer-detail1">
+                                    
+                                <div className="d-d-1">Country
+                                        <p> bbbb</p>
+                                    </div>
+
+                                    <div className="d-d-2">
+                                    Working days
+                                        <p>
+                                            ddd
+                                        </p>
+                                    </div>
+
+                                    <div className="d-d-3">
+                                    Overtime policy
+                                        <p>
+                                            fff
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
                             </div>
                         </div>
                     </div>
