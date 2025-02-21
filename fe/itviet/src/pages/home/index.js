@@ -8,82 +8,9 @@ import { FaLaptopHouse } from 'react-icons/fa';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
-
-
-
-   
-// const jobList = [
-//     {
-    //     id: 1,
-    //     time: "15 minutes ago",
-    //     image: "/anh.png",
-    //     title: "Senior IT Comtor (Japanese) - Up to 40M",
-    //     name: "NTT DATA VDS",
-    //     location: "Lotte Tower, 54 Lieu Giai, Ba Dinh, Ha Noi ",
-    //     work: "At office",
-    //     skill: "Japanese English",
-    //     state: "HOT",
-    //     conten1: [
-    //         "• Collaborating with engineering and development teams to evaluate and identify optimal cloud solutions.",
-    //         "• Modifying and improving existing systems.",
-    //         "• Designing, developing, and deploying modular cloud-based systems.",
-    //         "• Developing and maintaining cloud solutions in accordance with best practices."
-    //     ],
-    //     conten2: [
-    //         "• Tốt nghiệp đại học trở lên các chuyên ngành phù hợp như CNTT/Điện tử viễn thông hoặc các chuyên ngành có liên quan đến CNTT.",
-    //         "• Tối thiểu 3 năm kinh nghiệm trong lĩnh vực phát triển ứng dụng ngân hàng số, tài chính số hoặc các lĩnh vực liên quan (lập trình Java/ .NET, J2EE/Web service/JMS, Oracle Database, My SQL, Postgre SQL).",
-    //         "• Có kinh nghiệm về tích hợp hệ thống qua ESB (Enterprise Service Bus) sử dụng EIP (Enterprise Integration Patterns).",
-    //         "• Có kinh nghiệm về microservices, CI/CD",
-    //         "• Có kinh nghiệm về các công cụ giám sát như ELK, Splunk, Prometheus, Grafana",
-    //         "• Sử dụng thành thạo các IDE phát triển và các tool quản lý source code, quản lý công việc. (CI/CD: Jenkin, GIT, ANT);",
-    //         "• Nắm vững các design pattern thông dụng, các kiến thức về cấu trúc dữ liệu và giải thuật, lập trình hướng đối tượng,...",
-    //         "• Đã từng làm việc trong lĩnh vực ngân hàng, có kiến thức về nghiệp vụ và hệ thống thông tin ngân hàng là lợi thế.",
-    //         "• Kỹ năng Tiếng Anh đọc hiểu tài liệu kỹ thuật.",
-
-    //         "Ưu tiên các ứng viên",
-    //         "• Ham học hỏi tìm tòi sáng tạo cái mới",
-    //         "• Có hiểu biết về nghiệp vụ tài chính ngân hàng",
-    //         "• Đã từng triển khai sản phẩm lên AWS, Azuse",
-    //         "• Có kinh nghiệm làm việc theo mô hình Agile/ Scrum/ Waterfall"
-    //     ],
-    //     conten3: [
-    //         "Chế độ phúc lợi:",
-    //         "▪ Lương và phụ cấp:",
-    //         "Lương nhân viên PG Bank được áp dụng từ việc khảo sát mức lương thực tế của ngành và thị trường. Khung lương được xây dựng cho 9 cấp/ bậc của công việc, dải lương rộng cho phép thu hút được những ứng viên tiềm năng và đảm bảo trả mức lương cạnh tranh cao cho mọi vị trí.",
-    //         "Ngoài chế độ lương cạnh tranh, nhân viên PG Bank còn được hưởng rất nhiều chế độ phụ cấp khác theo đặc thù công việc như phụ cấp điện thoại, phụ cấp ăn trưa, phụ cấp đi lại, chế độ tham quan nghỉ mát hàng năm, tặng quà cho CBNV nhân dịp sinh nhật, thăm hỏi ốm đau, kết hôn, hỗ trợ thai sản.",
-
-    //         "▪ Chế độ khen thưởng:",
-    //         "PG Bank có chế độ đãi ngộ nhân viên xứng đáng với năng lực và đóng góp của từng cá nhân. Về cơ bản, PG Bank có chế độ thưởng như sau:",
-    //         "+ Thưởng theo kết quả kinh doanh",
-    //         "+ Thưởng hoàn thành công việc",
-    //         "+ Thưởng cho tập thể, cá nhân tiêu biểu trong năm",
-    //         "+ Thưởng đột xuất cho tập thể, cá nhân hoàn thành xuất sắc nhiệm vụ, có sáng kiến, đóng góp có giá trị cho Ngân hàng, thưởng do hoàn thành vượt mức kế hoạch được giao.",
-    //         "+ Thưởng cho toàn bộ CBNV ngân hàng trong các dịp lễ tết.",
-
-    //         "▪ Chế độ bảo hiểm:",
-    //         "Tất cả nhân viên chính thức của PG Bank đều được tham gia Bảo hiểm xã hội, Bảo hiểm y tế và bảo hiểm thất nghiệp theo đúng quy định của Luật lao động hiện hành.",
-    //         "Ngoài ra, tất cả nhân viên chính thức của PG Bank đều được mua thêm bảo hiểm Pijico, một gói bảo hiểm rất ưu việt giúp thanh toán các chi phí y tế như tiền thuốc, tiền viện phí… khi khám chữa bệnh tại các bệnh viện tốt nhất tại địa phương.",
-
-    //         "Đào tạo và phát triển nguồn nhân lực:",
-    //         "Công tác đào tạo và phát triển nguồn nhân lực luôn được chú trọng và phát triển tại PG Bank.",
-    //         "Với mục tiêu xây dựng nguồn nhân lực có năng lực và tính chuyên nghiệp cao đáp ứng chiến lược phát triển nhanh và bền vững của Ngân hàng, chuẩn bị nhân sự kế nhiệm cấp điều hành cho Ngân hàng.",
-    //         "PG Bank thường xuyên tổ chức cho nhân viên tham dự các khóa đào tạo trong và ngoài nước, các khóa đào tạo của NHNN, Hiệp hội ngân hàng, các tổ chức đào tạo có uy tín khác nhằm nâng cao trình độ chuyên môn, nâng cao kỹ năng làm việc hiệu quả và các kỹ năng quản lý, lãnh đạo trong từng giai đoạn, vị trí công tác.",
-
-    //         "Cơ hội thăng tiến:",
-    //         "Tại PG Bank, nhân viên được làm việc trong môi trường cạnh tranh lành mạnh, rất nhiều cơ hội phát triển, thăng tiến đang chờ đón các bạn."
-    //     ]
-    // },
-//     {
-//         id: 2, time: "16 minutes ago", image: "/anh.png", conten1: "",
-//         conten2: "", conten3: "", title: "Mid/Sr Full-Stack Developer-Australian FinTech (Remote)", name: "Automation Consulting Pty Ltd", location: "Others", work: "Remote", skill: "Nodejs Reactjs TypeScript", state: "HOT"
-//     },
-//     {
-//         id: 3, time: "27 minutes ago", image: "/anh.png", conten1: "",
-//         conten2: "", conten3: "", title: "Chuyên Viên Kiểm Thử Phần Mềm (Tester, QA QC)", name: "Thuy Anh Technology CO., LTD", location: "Ho Chi Minh", work: "At office", skill: "Tester Automation-Test QA/QC", state: "HOT"
-//     },
-//];
-
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icon
+import { FaPhone, FaEnvelope, FaTelegramPlane } from "react-icons/fa"; // FaTelegramPlane giống icon gửi tin nhắn trong Zalo
+import { FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 
 
 const jobData = [
@@ -104,17 +31,17 @@ const Home = () => {
     const [selectedJob, setSelectedJob] = useState(null);
 
 
-    
-  
+
+
     useEffect(() => {
-      fetch("https://67241832493fac3cf24d1d33.mockapi.io/0306221306/VanNamCao/itviet")
-        .then((response) => response.json())
-        .then((jobList) => {
-            setData(jobList);
-            const defaultJob = jobList.find(job => job.id === "1"); // Tìm công việc có id = 1
-        setSelectedJob(defaultJob || jobList[0]); // Nếu không có id = 1, lấy công việc đầu tiên
-        })
-        .catch((error) => console.error("Lỗi API:", error));
+        fetch("https://67241832493fac3cf24d1d33.mockapi.io/0306221306/VanNamCao/itviet")
+            .then((response) => response.json())
+            .then((jobList) => {
+                setData(jobList);
+                const defaultJob = jobList.find(job => job.id === "1"); // Tìm công việc có id = 1
+                setSelectedJob(defaultJob || jobList[0]); // Nếu không có id = 1, lấy công việc đầu tiên
+            })
+            .catch((error) => console.error("Lỗi API:", error));
     }, []);
 
 
@@ -256,6 +183,38 @@ const Home = () => {
         );
     };
 
+    const totalPages = 20; // Tổng số trang
+    const [currentPage, setCurrentPage] = useState(1); // Trang hiện tại
+
+    // Xử lý khi nhấn vào số trang
+    const goToPage = (page) => {
+        if (page >= 1 && page <= totalPages) {
+            setCurrentPage(page);
+        }
+    };
+
+    // Hàm tạo danh sách số trang cần hiển thị
+    const getPageNumbers = () => {
+        let pages = [];
+        if (totalPages <= 7) {
+            // Nếu tổng trang ít thì hiển thị hết
+            pages = [...Array(totalPages).keys()].map((n) => n + 1);
+        } else {
+            // Nếu trang hiện tại gần đầu
+            if (currentPage <= 4) {
+                pages = [1, 2, 3, 4, "...", totalPages];
+            }
+            // Nếu trang hiện tại gần cuối
+            else if (currentPage >= totalPages - 3) {
+                pages = [1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
+            }
+            // Nếu trang hiện tại ở giữa
+            else {
+                pages = [1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages];
+            }
+        }
+        return pages;
+    };
 
     return (
         <>
@@ -658,121 +617,231 @@ const Home = () => {
 
                             <p className="border-detail"></p>
                             <div className="detail">
-                            <div className="location-work-detail">
-                                <p><FaMapMarkerAlt style={{ marginRight: "8px" }} />{selectedJob?.location}</p>
-                                <p><FaLaptopHouse style={{ marginRight: "5px" }} /> {selectedJob?.work}</p>
-                                <p><FontAwesomeIcon icon={faClock} style={{ fontSize: "18px", color: "gray", marginRight: "5px" }} />{selectedJob?.time}</p>
-                                <p className="skill-detail"><div className="pd">Skills:</div><JobComponent key={selectedJob?.id} job={selectedJob} /></p>
+                                <div className="location-work-detail">
+                                    <p><FaMapMarkerAlt style={{ marginRight: "8px" }} />{selectedJob?.location}</p>
+                                    <p><FaLaptopHouse style={{ marginRight: "5px" }} /> {selectedJob?.work}</p>
+                                    <p><FontAwesomeIcon icon={faClock} style={{ fontSize: "18px", color: "gray", marginRight: "5px" }} />{selectedJob?.time}</p>
+                                    <p className="skill-detail"><div className="pd">Skills:</div><JobComponent key={selectedJob?.id} job={selectedJob} /></p>
 
-                                <p className="border-detail1"></p>
-                            </div>
-                            
-                            <div className="conten-detail">
-                                <h2 >Job description</h2>
-                                {selectedJob?.conten1.map((item, index) => (
-                                    item.includes("\n") ? (
-                                        <p key={index}>
-                                            <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
-                                            {item.split("\n").slice(2).map((part, i) => (
-                                                <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
-                                            ))}
-                                        </p>
-                                    )  : (
-                                        <p key={index}>{item}</p>
-                                    )
-                                ))}
-                                <p className="border-detail1"></p>
-                            </div>
-
-                            <div className="conten-detail">
-                                <h2 >Your skills and experience</h2>
-                                {selectedJob?.conten2.map((item, index) => (
-                                    item.includes("\n") ? (
-                                        <p key={index}>
-                                            <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
-                                            {item.split("\n").slice(2).map((part, i) => (
-                                                <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
-                                            ))}
-                                        </p>
-                                    )  : (
-                                        <p key={index}>{item}</p>
-                                    )
-                                ))}
-                                <p className="border-detail1"></p>
-                            </div>
-
-                            <div className="conten-detail">
-                                <h2 >Why you'll love working here</h2>
-                                {selectedJob?.conten3.map((item, index) => (
-                                    item.includes("\n") ? (
-                                        <p key={index}>
-                                            <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
-                                            {item.split("\n").slice(2).map((part, i) => (
-                                                <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
-                                            ))}
-                                        </p>
-                                    )  : (
-                                        <p key={index}>{item}</p>
-                                    )
-                                ))}
-                                <p className="border-detail"></p>
-                            </div>
-
-                            <div className="detail-ft">
-                                <h2>{selectedJob?.name}</h2>
-                                <p>{selectedJob?.name}</p>
-                                <div className="footer-detail">
-                                    <div className="d-t-1">
-                                        Company type
-                                        <p>bbbb</p>
-                                    </div>
-
-                                    <div className="d-t-2">
-                                    Company industry
-                                        <p>
-                                            ddd
-                                        </p>
-                                    </div>
-
-                                    <div className="d-t-3">
-                                    Company size
-                                        <p>
-                                            fff
-                                        </p>
-                                    </div>
+                                    <p className="border-detail1"></p>
                                 </div>
 
-                                
+                                <div className="conten-detail">
+                                    <h2 >Job description</h2>
+                                    {selectedJob?.conten1.map((item, index) => (
+                                        item.includes("\n") ? (
+                                            <p key={index}>
+                                                <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
+                                                {item.split("\n").slice(2).map((part, i) => (
+                                                    <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
+                                                ))}
+                                            </p>
+                                        ) : (
+                                            <p key={index}>{item}</p>
+                                        )
+                                    ))}
+                                    <p className="border-detail1"></p>
+                                </div>
 
-                                <div className="footer-detail1">
-                                    
-                                <div className="d-d-1">Country
-                                        <p> bbbb</p>
+                                <div className="conten-detail">
+                                    <h2 >Your skills and experience</h2>
+                                    {selectedJob?.conten2.map((item, index) => (
+                                        item.includes("\n") ? (
+                                            <p key={index}>
+                                                <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
+                                                {item.split("\n").slice(2).map((part, i) => (
+                                                    <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
+                                                ))}
+                                            </p>
+                                        ) : (
+                                            <p key={index}>{item}</p>
+                                        )
+                                    ))}
+                                    <p className="border-detail1"></p>
+                                </div>
+
+                                <div className="conten-detail">
+                                    <h2 >Why you'll love working here</h2>
+                                    {selectedJob?.conten3.map((item, index) => (
+                                        item.includes("\n") ? (
+                                            <p key={index}>
+                                                <strong>{item.split("\n")[1]}</strong> {/* In đậm phần ngay sau \n đầu tiên */}
+                                                {item.split("\n").slice(2).map((part, i) => (
+                                                    <span key={i}> {part}</span> // Giữ nguyên các phần còn lại
+                                                ))}
+                                            </p>
+                                        ) : (
+                                            <p key={index}>{item}</p>
+                                        )
+                                    ))}
+                                    <p className="border-detail"></p>
+                                </div>
+
+                                <div className="detail-ft">
+                                    <h2>{selectedJob?.name}</h2>
+                                    <p>{selectedJob?.name}</p>
+                                    <div className="footer-detail">
+                                        <div className="d-t-1">
+                                            Company type
+                                            <p>bbbb</p>
+                                        </div>
+
+                                        <div className="d-t-2">
+                                            Company industry
+                                            <p>
+                                                ddd
+                                            </p>
+                                        </div>
+
+                                        <div className="d-t-3">
+                                            Company size
+                                            <p>
+                                                fff
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    <div className="d-d-2">
-                                    Working days
-                                        <p>
-                                            ddd
-                                        </p>
-                                    </div>
 
-                                    <div className="d-d-3">
-                                    Overtime policy
-                                        <p>
-                                            fff
-                                        </p>
+
+                                    <div className="footer-detail1">
+
+                                        <div className="d-d-1">Country
+                                            <p> bbbb</p>
+                                        </div>
+
+                                        <div className="d-d-2">
+                                            Working days
+                                            <p>
+                                                ddd
+                                            </p>
+                                        </div>
+
+                                        <div className="d-d-3">
+                                            Overtime policy
+                                            <p>
+                                                fff
+                                            </p>
+                                        </div>
+
                                     </div>
 
                                 </div>
-
-                            </div>
 
                             </div>
                         </div>
                     </div>
                 </main>
             </div>
+            <footer className="footer-main">
+                <div className="pagination">
+                    {/* Nút Previous */}
+                    <button
+                        onClick={() => goToPage(currentPage - 1)}
+                        disabled={currentPage === 1}
+                        className="page-button"
+                    >
+                        <FaChevronLeft />
+                    </button>
+
+                    {/* Số trang */}
+                    <button
+                        onClick={() => goToPage(1)}
+                        className={`page-button ${currentPage === 1 ? "active" : ""}`}
+                    >
+                        1
+                    </button>
+
+                    <button
+                        onClick={() => goToPage(2)}
+                        className={`page-button ${currentPage === 2 ? "active" : ""}`}
+                    >
+                        2
+                    </button>
+
+                    <span className="dots">...</span>
+
+                    <button
+                        onClick={() => goToPage(totalPages)}
+                        className={`page-button ${currentPage === totalPages ? "active" : ""}`}
+                    >
+                        {totalPages}
+                    </button>
+
+                    {/* Nút Next */}
+                    <button
+                        onClick={() => goToPage(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                        className="page-button"
+                    >
+                        <FaChevronRight />
+                    </button>
+                </div>
+
+                <p className="border-detail"></p>
+
+                <div className="ft-h">Home
+                    ›
+                    All IT jobs
+                </div>
+
+                <div className="ft-backround">
+
+                    <div className="content-ft">
+                        <img src="/image.png" height="50" alt="Logo" />
+                        <p>Ít nhưng mà chất</p>
+                        <p className="social-icons"><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin className="icon linkedin" />
+                        </a>
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <FaFacebook className="icon facebook" />
+                            </a>
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                                <FaYoutube className="icon youtube" />
+                            </a></p>
+                    </div>
+
+                    <div className="ft-full">
+
+                        <div>
+                            <strong> About Us </strong>
+                            <p>Home</p>
+                            <p>About Us</p>
+                            <p>AI Match Service</p>
+                            <p>Contact Us</p>
+                            <p>All Jobs</p>
+                            <p>FAQ</p>
+                        </div>
+
+                        <div>
+                            <strong>Campaign</strong>
+                            <p>IT Story</p>
+                            <p>Writingn Contest</p>
+                            <p>Featured IT Jobs</p>
+                            <p>Annual Survey</p>
+                        </div>
+
+                        <div>
+                            <strong> Terms & Conditions </strong>
+                            <p>Privacy Policy</p>
+                            <p>Operating Regulation</p>
+                            <p>Complaint Handling</p>
+                            <p>Terms & Conditions</p>
+                            <p>Press</p>
+                        </div>
+
+                        <div>
+                            <strong> Want to post a job? Contact us at:</strong>
+                            <p><FaPhone style={{ marginRight: "5px" }} /> Ho Chi Minh: (+84) 977 460 519</p>
+                            <p><FaPhone style={{ marginRight: "5px" }} />Ha Noi: (+84) 983 131 351</p>
+                            <p><FaEnvelope style={{ marginRight: "5px" }} />Email: love@itviec.com</p>
+                            <p><FaTelegramPlane style={{ marginRight: "5px" }} />Submit contact information</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </footer>
         </>
     );
 };
