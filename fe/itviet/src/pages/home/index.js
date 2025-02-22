@@ -11,13 +11,15 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icon
 import { FaPhone, FaEnvelope, FaTelegramPlane } from "react-icons/fa"; // FaTelegramPlane giống icon gửi tin nhắn trong Zalo
 import { FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
-
+import { FaCommentAlt } from "react-icons/fa";
 
 const jobData = [
     "Senior Project Manager (Release Train Engineer)",
     "StarCamp (Fresher) Quality Engineers - Hanoi",
     "Quality Engineering Manager",
 ];
+
+
 
 const Home = () => {
     const [jobList, setData] = useState([]);
@@ -31,7 +33,13 @@ const Home = () => {
     const [selectedJob, setSelectedJob] = useState(null);
 
 
+    const [minSalary, setMinSalary] = useState(500);
+    const [maxSalary, setMaxSalary] = useState(10000);
+    const [isOpen3, setIsOpen3] = useState(false);
 
+    const toggleDropdown1 = () => {
+        setIsOpen3(!isOpen3);
+    };
 
     useEffect(() => {
         fetch("https://67241832493fac3cf24d1d33.mockapi.io/0306221306/VanNamCao/itviet")
@@ -253,6 +261,10 @@ const Home = () => {
                     <div className="underline-hover">Sign in/Sign up</div>
                     <div className="underline-hover">EN|VI</div>
                 </div>
+                <div className="feedback-button" >
+                    <FaCommentAlt style={{ color: "red", marginRight: "8px" }} />
+                    Feedback
+                </div>
             </header>
 
             <div className="background-section"></div>
@@ -389,20 +401,48 @@ const Home = () => {
                             )}
                         </div>
                         <div className="dropdown">
-                            <button className="dropdown-button-filter" onClick={toggleDropdown}>
+                            <button className="dropdown-button-filter" onClick={toggleDropdown1}>
                                 <p>
                                     <span className="">Salary</span>
                                     <FaCaretDown className="icon-right" />
                                 </p>
                             </button>
-                            {isOpen && (
-                                <ul className="dropdown-menu">
-                                    <li>All Cities</li>
-                                    <li>Ho Chi Minh</li>
-                                    <li>Ha Noi</li>
-                                    <li>Da Nang</li>
-                                    <li>Others</li>
-                                </ul>
+                            {isOpen3 && (
+                                <div className="dropdown-menu">
+                                    <div className="range-labels">
+                                        <span>${minSalary} - ${maxSalary}</span>
+                                    </div>
+                                    <div className="range-slider-container">
+                                        {/* Thanh slider ẩn nhưng chứa hai giá trị */}
+                                        <input
+                                            type="range"
+                                            min="500"
+                                            max="10000"
+                                            value={minSalary}
+                                            onChange={(e) => setMinSalary(Math.min(Number(e.target.value), maxSalary - 500))}
+                                            className="range-slider"
+                                        />
+                                        <input
+                                            type="range"
+                                            min="500"
+                                            max="10000"
+                                            value={maxSalary}
+                                            onChange={(e) => setMaxSalary(Math.max(Number(e.target.value), minSalary + 500))}
+                                            className="range-slider"
+                                        />
+                                        {/* Dải màu giữa hai đầu */}
+                                        <div
+                                            className="range-track"
+                                            style={{
+                                                left: `${((minSalary - 500) / 9500) * 100}%`,
+                                                width: `${((maxSalary - minSalary) / 9500) * 100}%`,
+                                            }}
+                                        />
+                                    </div>
+                                    {/* Nút Apply */}
+                                    <button className="apply-button" >Apply</button>
+
+                                </div>
                             )}
                         </div>
                         <div className="dropdown-industry">
@@ -414,6 +454,16 @@ const Home = () => {
                             </button>
                             {isOpenIndustry && (
                                 <ul className="dropdown-menu-checkbox-industry">
+
+                                    {/* Ô tìm kiếm */}
+                                    <input
+                                        type="text"
+                                        placeholder="Search industries..."
+                                        className="search-input1"
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                    />
+
                                     <li>
                                         <input type="checkbox" id="Consumer Goods" />
                                         <label htmlFor="Consumer Goods">Consumer Goods</label>
@@ -683,20 +733,20 @@ const Home = () => {
                                     <div className="footer-detail">
                                         <div className="d-t-1">
                                             Company type
-                                            <p>bbbb</p>
+                                            <p>{selectedJob?.type}</p>
                                         </div>
 
                                         <div className="d-t-2">
                                             Company industry
                                             <p>
-                                                ddd
+                                                {selectedJob?.industry}
                                             </p>
                                         </div>
 
                                         <div className="d-t-3">
                                             Company size
                                             <p>
-                                                fff
+                                                {selectedJob?.size}
                                             </p>
                                         </div>
                                     </div>
@@ -704,22 +754,21 @@ const Home = () => {
 
 
                                     <div className="footer-detail1">
-
                                         <div className="d-d-1">Country
-                                            <p> bbbb</p>
+                                            <p><img src={selectedJob?.flag} alt={`flag`} width="30" height="20" /> {selectedJob?.Country}</p>
                                         </div>
 
                                         <div className="d-d-2">
                                             Working days
                                             <p>
-                                                ddd
+                                                {selectedJob?.days}
                                             </p>
                                         </div>
 
                                         <div className="d-d-3">
                                             Overtime policy
                                             <p>
-                                                fff
+                                                {selectedJob?.Overtime}
                                             </p>
                                         </div>
 
