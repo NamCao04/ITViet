@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ITViet/static/css/main.f5404f7a.css",
-    "main.js": "/ITViet/static/js/main.a3247a82.js",
+    "main.js": "/ITViet/static/js/main.8eae2e9f.js",
     "index.html": "/ITViet/index.html",
     "main.f5404f7a.css.map": "/ITViet/static/css/main.f5404f7a.css.map",
-    "main.a3247a82.js.map": "/ITViet/static/js/main.a3247a82.js.map"
+    "main.8eae2e9f.js.map": "/ITViet/static/js/main.8eae2e9f.js.map"
   },
   "entrypoints": [
     "static/css/main.f5404f7a.css",
-    "static/js/main.a3247a82.js"
+    "static/js/main.8eae2e9f.js"
   ]
 }
