@@ -228,7 +228,7 @@ const Home = () => {
         <>
             {/* Header */}
             <header className="Header">
-                <img src="/image.png" height="37" alt="Logo" />
+                <img src="https://itviec.com/assets/logo-itviec-4492a2f2577a15a0a1d55444c21c0fa55810822b3b189fc689b450fb62ce0b5b.png" height="37" alt="Logo" />
                 <nav className="nav-menu">
                     <div className="dropdown">
                         <button className="dropdown-button"><p>All Jobs <FaCaretDown /></p></button>
@@ -309,8 +309,8 @@ const Home = () => {
                     </div>
 
                     <div className="header-images">
-                        <img src="/anh.png" height="37" alt="Logo" className="img-size1" />
-                        <img src="/anh1.png" height="37" alt="Logo" className="img-size2" />
+                        <img src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeWtVVEE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1a31ceb56a18eaff830ef23798c9e1f3fe2e0613/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFsZ0NNQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c7ff83b896d4db7bd4f14a67b569154fd1b65a60/LinkedIn%20Business%20Banner%20June%202024%20Update%20(600x400px)%20.png" height="37" alt="Logo" className="img-size1" />
+                        <img src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmZvSXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--88c82102b4c6782414b90e4077f75449b9789560/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcEFhb3ciLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb0ebae071595ab1791dc0ad640ef70a76504047/Logo%20MB%20he%20mau%20RGB%2001.png" height="37" alt="Logo" className="img-size2" />
                         <div className="header-conten">
                             <h3 className="header-main">NAB Innovation Centre Vietnam</h3>
 

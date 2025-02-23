@@ -292,11 +292,12 @@ body {
 }
 
 .img-size2 {
+    margin-top: 40px;
     width: 123px;
     height: 120px;
     transform: translateX(-24%);
     /* Dịch chuyển về chính giữa */
-    padding-top: 40px;
+    background-color: white;
 }
 
 .header-main {
