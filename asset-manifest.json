@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ITViet/static/css/main.f5404f7a.css",
+    "main.js": "/ITViet/static/js/main.a3247a82.js",
+    "index.html": "/ITViet/index.html",
+    "main.f5404f7a.css.map": "/ITViet/static/css/main.f5404f7a.css.map",
+    "main.a3247a82.js.map": "/ITViet/static/js/main.a3247a82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5404f7a.css",
+    "static/js/main.a3247a82.js"
+  ]
+}
